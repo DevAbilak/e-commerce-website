@@ -5,6 +5,9 @@ import Checkout from "./pages/checkout/Checkout";
 import Tracking from "./pages/Tracking";
 import "./styles/shared/general.css";
 
+// TODO: add favicon images to each pages.
+// TODO: build not found page
+
 const App = () => {
   return (
     <BrowserRouter>
