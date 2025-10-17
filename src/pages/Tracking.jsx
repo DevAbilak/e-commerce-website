@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Tracking = () => {
   return (
-    <div>Tracking</div>
+    <div>
+      <Navbar />
+      Tracking
+    </div>
   )
 }
 
