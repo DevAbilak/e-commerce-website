@@ -1,16 +1,14 @@
-import '../styles/shared/header.css'
-
+import { Link } from "react-router";
+import "../styles/shared/header.css";
 
 const Navbar = () => {
   return (
     <div className="header">
       <div className="left-section">
-        <a href="/" className="header-link">
-          <img className="logo"
-            src="images/logo-white.png" />
-          <img className="mobile-logo"
-            src="images/mobile-logo-white.png" />
-        </a>
+        <Link to="/" className="header-link">
+          <img className="logo" src="images/logo-white.png" />
+          <img className="mobile-logo" src="images/mobile-logo-white.png" />
+        </Link>
       </div>
 
       <div className="middle-section">
@@ -22,19 +20,18 @@ const Navbar = () => {
       </div>
 
       <div className="right-section">
-        <a className="orders-link header-link" href="orders">
-
+        <Link className="orders-link header-link" to="/orders">
           <span className="orders-text">Orders</span>
-        </a>
+        </Link>
 
-        <a className="cart-link header-link" href="checkout">
+        <Link className="cart-link header-link" to="/checkout">
           <img className="cart-icon" src="images/icons/cart-icon.png" />
           <div className="cart-quantity">3</div>
           <div className="cart-text">Cart</div>
-        </a>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
