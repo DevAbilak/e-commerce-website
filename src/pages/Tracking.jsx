@@ -4,6 +4,7 @@ import '../styles/pages/tracking.css'
 const Tracking = () => {
   return (
     <div>
+      <title>Tracking</title>
       <Navbar />
       <div className="tracking-page">
         <div className="order-tracking">

@@ -4,6 +4,7 @@ import '../styles/pages/orders.css'
 const Orders = () => {
   return (
     <div>
+      <title>Orders</title>
       <Navbar />
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
