@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
-import Checkout from "./pages/Checkout";
+import Checkout from "./pages/checkout/Checkout";
 import Tracking from "./pages/Tracking";
 import "./styles/shared/general.css";
 
