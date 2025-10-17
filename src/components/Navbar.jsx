@@ -1,8 +1,5 @@
 import '../styles/shared/header.css'
-import logo from '../images/logo-white.png'
-import mobileLogo from '../images/mobile-logo-white.png'
-import searchIcon from '../images/icons/search-icon.png'
-import cartIcon from "../images/icons/cart-icon.png"
+
 
 const Navbar = () => {
   return (
@@ -10,9 +7,9 @@ const Navbar = () => {
       <div className="left-section">
         <a href="index.html" className="header-link">
           <img className="logo"
-            src={logo} />
+            src="images/logo-white.png" />
           <img className="mobile-logo"
-            src={mobileLogo} />
+            src="images/mobile-logo-white.png" />
         </a>
       </div>
 
@@ -20,7 +17,7 @@ const Navbar = () => {
         <input className="search-bar" type="text" placeholder="Search" />
 
         <button className="search-button">
-          <img className="search-icon" src={searchIcon} />
+          <img className="search-icon" src="images/icons/search-icon.png" />
         </button>
       </div>
 
@@ -31,7 +28,7 @@ const Navbar = () => {
         </a>
 
         <a className="cart-link header-link" href="checkout.html">
-          <img className="cart-icon" src={cartIcon} />
+          <img className="cart-icon" src="images/icons/cart-icon.png" />
           <div className="cart-quantity">3</div>
           <div className="cart-text">Cart</div>
         </a>

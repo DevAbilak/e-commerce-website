@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Orders from './pages/Orders'
 import Checkout from './pages/Checkout'
 import Tracking from './pages/Tracking'
+import './styles/shared/general.css'
 
 const App = () => {
   return (
