@@ -8,7 +8,7 @@ const Tracking = () => {
       <Navbar />
       <div className="tracking-page">
         <div className="order-tracking">
-          <a className="back-to-orders-link link-primary" href="orders.html">
+          <a className="back-to-orders-link link-primary" href="orders">
             View all orders
           </a>
 
