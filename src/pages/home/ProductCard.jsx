@@ -1,3 +1,5 @@
+import { formatMoney } from "../../Utils/formatMoney";
+
 const ProductCard = ({
   product: {
     image,
@@ -22,7 +24,7 @@ const ProductCard = ({
         <div className="product-rating-count link-primary">{count}</div>
       </div>
 
-      <div className="product-price">{(priceCents / 100).toFixed(2)}</div>
+      <div className="product-price">{formatMoney(priceCents)}</div>
 
       <div className="product-quantity-container">
         <select>

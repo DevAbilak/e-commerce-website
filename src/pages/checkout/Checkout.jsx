@@ -1,4 +1,5 @@
 import "../../styles/pages/checkout/checkout.css";
+import { formatMoney } from "../../Utils/formatMoney";
 import CheckoutHeader from "./CheckoutHeader";
 
 const Checkout = ({ cart }) => {
@@ -31,7 +32,7 @@ const Checkout = ({ cart }) => {
                         {cartItem.product.name}
                       </div>
                       <div className="product-price">
-                        ${(cartItem.product.priceCents / 100).toFixed(2)}
+                        {formatMoney(cartItem.product.priceCents)}
                       </div>
                       <div className="product-quantity">
                         <span>
