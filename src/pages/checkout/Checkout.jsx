@@ -4,6 +4,7 @@ import CheckoutHeader from "./CheckoutHeader";
 const Checkout = () => {
   return (
     <div>
+      <link rel="icon" type="image/svg+xml" href="/images/cart-favicon.png" />
       <title>Checkout</title>
       <CheckoutHeader />
 

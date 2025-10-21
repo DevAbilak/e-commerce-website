@@ -5,6 +5,11 @@ import "../styles/pages/tracking.css";
 const Tracking = () => {
   return (
     <div>
+      <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/images/tracking-favicon.png"
+      />
       <title>Tracking</title>
       <Navbar />
       <div className="tracking-page">

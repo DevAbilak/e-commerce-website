@@ -5,6 +5,7 @@ import "../styles/pages/orders.css";
 const Orders = () => {
   return (
     <div>
+      <link rel="icon" type="image/svg+xml" href="/images/orders-favicon.png" />
       <title>Orders</title>
       <Navbar />
       <div className="orders-page">
