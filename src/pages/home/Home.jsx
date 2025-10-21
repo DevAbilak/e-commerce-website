@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import ProductCard from "./ProductCard";
 import "../../styles/pages/index.css";
 
-const Home = ({ cart }) => {
+const Home = ({ cart, loadCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,11 @@ const Home = ({ cart }) => {
       <div className="home-page">
         <div className="products-grid">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              loadCart={loadCart}
+            />
           ))}
         </div>
       </div>

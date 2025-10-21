@@ -11,18 +11,18 @@ import "./styles/shared/general.css";
 const App = () => {
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    const fetchCartData = async () => {
-      const res = await axios.get("/api/cart-items?expand=product");
-      setCart(res.data);
-    };
+  const fetchCartData = async () => {
+    const res = await axios.get("/api/cart-items?expand=product");
+    setCart(res.data);
+  };
 
+  useEffect(() => {
     fetchCartData();
   }, []);
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home cart={cart} />} />
+        <Route index element={<Home cart={cart} loadCart={fetchCartData} />} />
         <Route path="orders" element={<Orders cart={cart} />} />
         <Route path="checkout" element={<Checkout cart={cart} />} />
         <Route
