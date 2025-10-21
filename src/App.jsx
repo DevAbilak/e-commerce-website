@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Home from "./pages/home/Home";
-import Orders from "./pages/Orders";
+import Orders from "./pages/orders/Orders";
 import Checkout from "./pages/checkout/Checkout";
 import Tracking from "./pages/Tracking";
 import NotFound from "./pages/NotFound";
