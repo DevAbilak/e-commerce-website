@@ -3,10 +3,8 @@ import Home from "./pages/Home";
 import Orders from "./pages/Orders";
 import Checkout from "./pages/checkout/Checkout";
 import Tracking from "./pages/Tracking";
+import NotFound from "./pages/NotFound";
 import "./styles/shared/general.css";
-
-// TODO: add favicon images to each pages.
-// TODO: build not found page
 
 const App = () => {
   return (
@@ -16,6 +14,7 @@ const App = () => {
         <Route path="orders" element={<Orders />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="tracking" element={<Tracking />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

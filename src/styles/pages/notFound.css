@@ -1,0 +1,13 @@
+.not-found-page{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.navigate-btn{
+  padding: 16px 32px;
+  text-decoration: none;
+}

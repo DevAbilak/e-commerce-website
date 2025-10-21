@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import "../styles/pages/index.css";
-import { useEffect } from "react";
 
 const Home = () => {
   return (
