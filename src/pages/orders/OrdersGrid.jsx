@@ -27,7 +27,7 @@ const OrdersGrid = ({ orders }) => {
                 </div>
               </div>
 
-              <OrdersDetailGrid products={order.products} />
+              <OrdersDetailGrid products={order.products} orderId={order.id} />
             </div>
           );
         })}

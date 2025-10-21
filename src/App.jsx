@@ -25,7 +25,10 @@ const App = () => {
         <Route index element={<Home cart={cart} />} />
         <Route path="orders" element={<Orders cart={cart} />} />
         <Route path="checkout" element={<Checkout cart={cart} />} />
-        <Route path="tracking" element={<Tracking cart={cart} />} />
+        <Route
+          path="tracking/:orderId/:productId"
+          element={<Tracking cart={cart} />}
+        />
         <Route path="*" element={<NotFound cart={cart} />} />
       </Routes>
     </BrowserRouter>

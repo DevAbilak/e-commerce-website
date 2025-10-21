@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { Link } from "react-router";
 import buyAgainIcon from "../../assets/images/icons/buy-again.png";
 
-const OrdersDetailGrid = ({ products }) => {
+const OrdersDetailGrid = ({ products, orderId }) => {
   return (
     <div className="order-details-grid">
       {products.map((product) => {
@@ -29,7 +29,7 @@ const OrdersDetailGrid = ({ products }) => {
             </div>
 
             <div className="product-actions">
-              <Link to="/tracking">
+              <Link to={`/tracking/${orderId}/${product.product.id}`}>
                 <button className="track-package-button button-secondary">
                   Track package
                 </button>
