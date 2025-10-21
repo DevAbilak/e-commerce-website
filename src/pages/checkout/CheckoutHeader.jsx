@@ -3,8 +3,9 @@ import "../../styles/pages/checkout/checkout-header.css";
 import logo from "../../assets/images/logo.png";
 import mobileLogo from "../../assets/images/mobile-logo.png";
 import checkoutLockIcon from "../../assets/images/icons/checkout-lock-icon.png";
+import { calcCartQuantity } from "../../Utils/calcCartQuantity";
 
-const CheckoutHeader = () => {
+const CheckoutHeader = ({ cart }) => {
   return (
     <div className="checkout-header">
       <div className="header-content">
@@ -18,7 +19,7 @@ const CheckoutHeader = () => {
         <div className="checkout-header-middle-section">
           Checkout (
           <Link className="return-to-home-link" to="/">
-            3 items
+            {calcCartQuantity(cart)} items
           </Link>
           )
         </div>
