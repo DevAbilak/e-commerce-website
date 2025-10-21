@@ -1,13 +1,14 @@
 import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import "../styles/pages/orders.css";
+import buyAgainIcon from "../assets/images/icons/buy-again.png";
 
-const Orders = () => {
+const Orders = ({ cart }) => {
   return (
     <div>
       <link rel="icon" type="image/svg+xml" href="/images/orders-favicon.png" />
       <title>Orders</title>
-      <Navbar />
+      <Navbar cart={cart} />
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
 
@@ -45,10 +46,7 @@ const Orders = () => {
                 </div>
                 <div className="product-quantity">Quantity: 1</div>
                 <button className="buy-again-button button-primary">
-                  <img
-                    className="buy-again-icon"
-                    src="images/icons/buy-again.png"
-                  />
+                  <img className="buy-again-icon" src="images/icons/" />
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
@@ -74,10 +72,7 @@ const Orders = () => {
                 </div>
                 <div className="product-quantity">Quantity: 2</div>
                 <button className="buy-again-button button-primary">
-                  <img
-                    className="buy-again-icon"
-                    src="images/icons/buy-again.png"
-                  />
+                  <img className="buy-again-icon" src={buyAgainIcon} />
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>

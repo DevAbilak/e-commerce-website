@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import ProductCard from "./ProductCard";
 import "../../styles/pages/index.css";
 
-const Home = () => {
+const Home = ({ cart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <link rel="icon" type="image/svg+xml" href="/images/home-favicon.png" />
-      <Navbar />
+      <Navbar cart={cart} />
       <div className="home-page">
         <div className="products-grid">
           {products.map((product) => (

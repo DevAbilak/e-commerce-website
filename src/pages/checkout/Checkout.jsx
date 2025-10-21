@@ -1,7 +1,7 @@
 import "../../styles/pages/checkout/checkout.css";
 import CheckoutHeader from "./CheckoutHeader";
 
-const Checkout = () => {
+const Checkout = ({ cart }) => {
   return (
     <div>
       <link rel="icon" type="image/svg+xml" href="/images/cart-favicon.png" />

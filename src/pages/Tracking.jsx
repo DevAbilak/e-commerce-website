@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import "../styles/pages/tracking.css";
 
-const Tracking = () => {
+const Tracking = ({ cart }) => {
   return (
     <div>
       <link
@@ -11,7 +11,7 @@ const Tracking = () => {
         href="/images/tracking-favicon.png"
       />
       <title>Tracking</title>
-      <Navbar />
+      <Navbar cart={cart} />
       <div className="tracking-page">
         <div className="order-tracking">
           <Link className="back-to-orders-link link-primary" to="/orders">

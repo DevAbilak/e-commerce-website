@@ -5,7 +5,13 @@ import mobileLogo from "../assets/images/mobile-logo-white.png";
 import searchIcon from "../assets/images/icons/search-icon.png";
 import cartIcon from "../assets/images/icons/cart-icon.png";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
+  let totalQuantity = 0;
+
+  cart.map((item) => {
+    totalQuantity += item.quantity;
+  });
+
   return (
     <div className="header">
       <div className="left-section">
@@ -30,7 +36,7 @@ const Navbar = () => {
 
         <NavLink className="cart-link header-link" to="/checkout">
           <img className="cart-icon" src={cartIcon} />
-          <div className="cart-quantity">3</div>
+          <div className="cart-quantity">{totalQuantity}</div>
           <div className="cart-text">Cart</div>
         </NavLink>
       </div>
