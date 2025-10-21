@@ -9,9 +9,14 @@ const Checkout = ({ cart }) => {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/api/delivery-options?expand=estimatedDeliveryTime")
-      .then((res) => setDeliveryOptions(res.data));
+    const fetchDeliveryOptionsData = async () => {
+      const res = await axios.get(
+        "/api/delivery-options?expand=estimatedDeliveryTime"
+      );
+      setDeliveryOptions(res.data);
+    };
+
+    fetchDeliveryOptionsData();
   }, []);
 
   return (
