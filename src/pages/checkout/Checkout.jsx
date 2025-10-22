@@ -46,7 +46,10 @@ const Checkout = ({ cart, loadCart }) => {
           />
 
           {paymentSummary !== null && (
-            <PaymentSummary paymentSummary={paymentSummary} />
+            <PaymentSummary
+              paymentSummary={paymentSummary}
+              loadCart={loadCart}
+            />
           )}
         </div>
       </div>
