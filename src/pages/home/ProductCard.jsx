@@ -13,6 +13,7 @@ const ProductCard = ({
   loadCart,
 }) => {
   const [quantity, setQuantity] = useState(1);
+  const [isAdded, setIsAdded] = useState(false);
 
   const handleQuantityChange = (e) => {
     setQuantity(Number(e.target.value));
@@ -23,7 +24,11 @@ const ProductCard = ({
       productId: id,
       quantity,
     });
-    loadCart();
+    await loadCart();
+    setIsAdded(true);
+    setTimeout(() => {
+      setIsAdded(false);
+    }, 2000);
   };
 
   return (
@@ -61,7 +66,7 @@ const ProductCard = ({
 
       <div className="product-spacer"></div>
 
-      <div className="added-to-cart">
+      <div className="added-to-cart" style={{ opacity: isAdded ? 1 : 0 }}>
         <img src="images/icons/checkmark.png" />
         Added
       </div>
