@@ -23,7 +23,10 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home cart={cart} loadCart={fetchCartData} />} />
-        <Route path="orders" element={<Orders cart={cart} />} />
+        <Route
+          path="orders"
+          element={<Orders cart={cart} loadCart={fetchCartData} />}
+        />
         <Route
           path="checkout"
           element={<Checkout cart={cart} loadCart={fetchCartData} />}

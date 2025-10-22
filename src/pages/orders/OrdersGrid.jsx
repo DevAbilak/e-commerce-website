@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { formatMoney } from "../../Utils/formatMoney";
 import OrdersDetailGrid from "./OrdersDetailGrid";
 
-const OrdersGrid = ({ orders }) => {
+const OrdersGrid = ({ orders, loadCart }) => {
   return (
     <div className="orders-grid">
       {orders.length > 0 &&
@@ -27,7 +27,11 @@ const OrdersGrid = ({ orders }) => {
                 </div>
               </div>
 
-              <OrdersDetailGrid products={order.products} orderId={order.id} />
+              <OrdersDetailGrid
+                products={order.products}
+                orderId={order.id}
+                loadCart={loadCart}
+              />
             </div>
           );
         })}
