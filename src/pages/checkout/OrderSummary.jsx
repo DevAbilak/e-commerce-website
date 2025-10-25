@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import axios from "axios";
-import { formatMoney } from "../../Utils/formatMoney";
 import DeliveryOptions from "./DeliveryOptions";
+import CartItemDetails from "../orders/CartItemDetails";
 
 const OrderSummary = ({ deliveryOptions, cart, loadCart }) => {
   return (
@@ -29,7 +29,7 @@ const OrderSummary = ({ deliveryOptions, cart, loadCart }) => {
               </div>
 
               <div className="cart-item-details-grid">
-                <img className="product-image" src={cartItem.product.image} />
+                {/* <img className="product-image" src={cartItem.product.image} />
 
                 <div className="cart-item-details">
                   <div className="product-name">{cartItem.product.name}</div>
@@ -39,11 +39,17 @@ const OrderSummary = ({ deliveryOptions, cart, loadCart }) => {
                   <div className="product-quantity">
                     <span>
                       Quantity:{" "}
+                      {isUpdateOn && (
+                        <input type="text" className="update-quantity-input" />
+                      )}
                       <span className="quantity-label">
                         {cartItem.quantity}
                       </span>
                     </span>
-                    <span className="update-quantity-link link-primary">
+                    <span
+                      className="update-quantity-link link-primary"
+                      onClick={handleUpdateQuantity}
+                    >
                       Update
                     </span>
                     <span
@@ -53,7 +59,13 @@ const OrderSummary = ({ deliveryOptions, cart, loadCart }) => {
                       Delete
                     </span>
                   </div>
-                </div>
+                </div> */}
+
+                <CartItemDetails
+                  handleDeleteCartItem={handleDeleteCartItem}
+                  cartItem={cartItem}
+                  loadCart={loadCart}
+                />
 
                 <DeliveryOptions
                   deliveryOptions={deliveryOptions}
