@@ -78,6 +78,7 @@ const ProductCard = ({
 
       <button
         className="add-to-cart-button button-primary"
+        data-testid="add-to-cart-btn"
         onClick={addProductToCart}
       >
         Add to Cart
