@@ -1,20 +1,28 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router";
+import axios from "axios";
 import Navbar from "../../components/Navbar";
 import ProductCard from "./ProductCard";
 import "../../styles/pages/index.css";
 
 const Home = ({ cart, loadCart }) => {
   const [products, setProducts] = useState([]);
+  const [searchParams] = useSearchParams();
+  const search = searchParams.get("search");
 
   useEffect(() => {
     const fetchProductsData = async () => {
-      const res = await axios.get("/api/products");
+      let res;
+      if (search) {
+        res = await axios.get(`/api/products?search=${search}`);
+      } else {
+        res = await axios.get("/api/products");
+      }
       setProducts(res.data);
     };
 
     fetchProductsData();
-  }, []);
+  }, [search]);
 
   return (
     <div>
