@@ -12,9 +12,6 @@ describe("Homepage component", () => {
 
   beforeEach(() => {
     loadCart = vi.fn();
-  });
-
-  it("displays the products correctly", async () => {
     axios.get.mockImplementation(async (urlPath) => {
       if (urlPath === "/api/products") {
         return {
@@ -51,7 +48,9 @@ describe("Homepage component", () => {
         <Home cart={[]} loadCart={loadCart} />
       </MemoryRouter>
     );
+  });
 
+  it("displays the products correctly", async () => {
     const productContainers = await screen.findAllByTestId("product-container");
 
     expect(productContainers.length).toBe(2);
@@ -65,5 +64,38 @@ describe("Homepage component", () => {
     expect(
       within(productContainers[1]).getByText("Intermediate Size Basketball")
     ).toBeInTheDocument();
+  });
+
+  it("add product to cart", async () => {
+    const user = userEvent.setup();
+    const productContainers = await screen.findAllByTestId("product-container");
+
+    const addToCartBtn1 = within(productContainers[0]).getByTestId(
+      "add-to-cart-btn"
+    );
+    const quantitySelector1 = within(productContainers[0]).getByTestId(
+      "product-quantity"
+    );
+    await user.selectOptions(quantitySelector1, "2");
+    await user.click(addToCartBtn1);
+
+    const addToCartBtn2 = within(productContainers[1]).getByTestId(
+      "add-to-cart-btn"
+    );
+    const quantitySelector2 = within(productContainers[1]).getByTestId(
+      "product-quantity"
+    );
+    await user.selectOptions(quantitySelector2, "3");
+    await user.click(addToCartBtn2);
+
+    expect(axios.post).toHaveBeenNthCalledWith(1, "/api/cart-items", {
+      productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+      quantity: 2,
+    });
+    expect(axios.post).toHaveBeenNthCalledWith(2, "/api/cart-items", {
+      productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+      quantity: 3,
+    });
+    expect(loadCart).toHaveBeenCalledTimes(2);
   });
 });
