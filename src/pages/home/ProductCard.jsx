@@ -55,7 +55,11 @@ const ProductCard = ({
       <div className="product-price">{formatMoney(priceCents)}</div>
 
       <div className="product-quantity-container">
-        <select value={quantity} onChange={handleQuantityChange}>
+        <select
+          value={quantity}
+          onChange={handleQuantityChange}
+          data-testid="product-quantity"
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
