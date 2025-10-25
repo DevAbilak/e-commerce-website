@@ -29,6 +29,15 @@ const CartItemDetails = ({
     setQuantity(e.target.value);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleUpdateQuantity();
+    } else if (e.key === "Escape") {
+      setQuantity(cartItemQuantity);
+      setIsUpdateOn(false);
+    }
+  };
+
   return (
     <>
       <img className="product-image" src={image} />
@@ -45,6 +54,7 @@ const CartItemDetails = ({
                 className="update-quantity-input"
                 value={quantity}
                 onChange={handleInputQuantity}
+                onKeyDown={handleKeyDown}
               />
             )}
             <span className="quantity-label">{cartItemQuantity}</span>
