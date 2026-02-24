@@ -11,6 +11,7 @@ const Home = ({ cart, loadCart }) => {
   const search = searchParams.get("search");
 
   useEffect(() => {
+    fetch("/api/products").then((res) => console.log(res.json()));
     const fetchProductsData = async () => {
       let res;
       if (search) {
