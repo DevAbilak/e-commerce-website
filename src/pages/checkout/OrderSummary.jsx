@@ -11,11 +11,13 @@ const OrderSummary = ({ deliveryOptions, cart, loadCart }) => {
           const selectedDeliveryOption = deliveryOptions.find(
             (deliveryOption) => {
               return deliveryOption.id === cartItem.deliveryOptionId;
-            }
+            },
           );
 
           const handleDeleteCartItem = async () => {
-            await axios.delete(`/api/cart-items/${cartItem.productId}`);
+            await axios.delete(
+              `https://e-commerce-backend-6h0s.onrender.com/api/cart-items/${cartItem.productId}`,
+            );
             await loadCart();
           };
 
@@ -24,7 +26,7 @@ const OrderSummary = ({ deliveryOptions, cart, loadCart }) => {
               <div className="delivery-date">
                 Delivery date:{" "}
                 {dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format(
-                  "dddd, MMMM D"
+                  "dddd, MMMM D",
                 )}
               </div>
 

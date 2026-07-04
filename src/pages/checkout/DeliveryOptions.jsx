@@ -8,9 +8,12 @@ const DeliveryOptions = ({ deliveryOptions, cartItem, loadCart }) => {
       <div className="delivery-options-title">Choose a delivery option:</div>
       {deliveryOptions.map((deliveryOption) => {
         const handleDeliveryOptionChange = async () => {
-          await axios.put(`/api/cart-items/${cartItem.productId}`, {
-            deliveryOptionId: deliveryOption.id,
-          });
+          await axios.put(
+            `https://e-commerce-backend-6h0s.onrender.com/api/cart-items/${cartItem.productId}`,
+            {
+              deliveryOptionId: deliveryOption.id,
+            },
+          );
           await loadCart();
         };
         return (
@@ -29,7 +32,7 @@ const DeliveryOptions = ({ deliveryOptions, cartItem, loadCart }) => {
             <div>
               <div className="delivery-option-date">
                 {dayjs(deliveryOption.estimatedDeliveryTimeMs).format(
-                  "dddd, MMMM D"
+                  "dddd, MMMM D",
                 )}
               </div>
               <div className="delivery-option-price">

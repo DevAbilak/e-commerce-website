@@ -15,7 +15,7 @@ const PaymentSummary = ({
 }) => {
   const navigate = useNavigate();
   const handlePlaceOrder = async () => {
-    await axios.post("/api/orders");
+    await axios.post("https://e-commerce-backend-6h0s.onrender.com/api/orders");
     await loadCart();
     navigate("/orders");
   };

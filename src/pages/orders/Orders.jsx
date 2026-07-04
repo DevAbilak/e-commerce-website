@@ -9,7 +9,9 @@ const Orders = ({ cart, loadCart }) => {
 
   useEffect(() => {
     const fetchOrdersData = async () => {
-      const res = await axios.get("/api/orders?expand=products");
+      const res = await axios.get(
+        "https://e-commerce-backend-6h0s.onrender.com/api/orders?expand=products",
+      );
       setOrders(res.data);
     };
 

@@ -20,10 +20,13 @@ const ProductCard = ({
   };
 
   const addProductToCart = async () => {
-    await axios.post("/api/cart-items", {
-      productId: id,
-      quantity,
-    });
+    await axios.post(
+      "https://e-commerce-backend-6h0s.onrender.com/api/cart-items",
+      {
+        productId: id,
+        quantity,
+      },
+    );
     await loadCart();
     setIsAdded(true);
     setTimeout(() => {

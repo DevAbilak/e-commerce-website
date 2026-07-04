@@ -17,9 +17,12 @@ const CartItemDetails = ({
   const handleUpdateQuantity = async () => {
     setIsUpdateOn((prev) => !prev);
     if (isUpdateOn) {
-      await axios.put(`/api/cart-items/${productId}`, {
-        quantity: Number(quantity),
-      });
+      await axios.put(
+        `https://e-commerce-backend-6h0s.onrender.com/api/cart-items/${productId}`,
+        {
+          quantity: Number(quantity),
+        },
+      );
       setIsUpdateOn(false);
       await loadCart();
     }

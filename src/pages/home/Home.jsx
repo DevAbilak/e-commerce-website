@@ -15,9 +15,13 @@ const Home = ({ cart, loadCart }) => {
     const fetchProductsData = async () => {
       let res;
       if (search) {
-        res = await axios.get(`/api/products?search=${search}`);
+        res = await axios.get(
+          `https://e-commerce-backend-6h0s.onrender.com/api/products?search=${search}`,
+        );
       } else {
-        res = await axios.get("/api/products");
+        res = await axios.get(
+          "https://e-commerce-backend-6h0s.onrender.com/api/products",
+        );
       }
       setProducts(res.data);
     };

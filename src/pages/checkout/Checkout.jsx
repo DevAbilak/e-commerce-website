@@ -12,7 +12,7 @@ const Checkout = ({ cart, loadCart }) => {
   useEffect(() => {
     const fetchDeliveryOptionsData = async () => {
       const res = await axios.get(
-        "/api/delivery-options?expand=estimatedDeliveryTime"
+        "https://e-commerce-backend-6h0s.onrender.com/api/delivery-options?expand=estimatedDeliveryTime",
       );
       setDeliveryOptions(res.data);
     };
@@ -22,7 +22,9 @@ const Checkout = ({ cart, loadCart }) => {
 
   useEffect(() => {
     const fetchPaymentSummaryData = async () => {
-      const res = await axios.get("/api/payment-summary");
+      const res = await axios.get(
+        "https://e-commerce-backend-6h0s.onrender.com/api/payment-summary",
+      );
       setPaymentSummary(res.data);
     };
 

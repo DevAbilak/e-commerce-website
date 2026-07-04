@@ -12,7 +12,9 @@ const Tracking = ({ cart }) => {
 
   useEffect(() => {
     const fetchOrderData = async () => {
-      const res = await axios.get(`/api/orders/${orderId}?expand=products`);
+      const res = await axios.get(
+        `https://e-commerce-backend-6h0s.onrender.com/api/orders/${orderId}?expand=products`,
+      );
       setOrder(res.data);
     };
 
