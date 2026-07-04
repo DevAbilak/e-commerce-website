@@ -79,7 +79,7 @@ const ProductCard = ({
       <div className="product-spacer"></div>
 
       <div className="added-to-cart" style={{ opacity: isAdded ? 1 : 0 }}>
-        <img src="images/icons/checkmark.png" />
+        <img src="https://e-commerce-website-one-lovat.vercel.app/images/icons/checkmark.png" />
         Added
       </div>
 
