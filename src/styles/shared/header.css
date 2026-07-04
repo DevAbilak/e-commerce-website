@@ -39,23 +39,20 @@
 }
 
 .header .logo {
-  height: 26px;
-  margin-top: 1px;
-}
-
-.header .mobile-logo {
-  display: none;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
 }
 
 @media (max-width: 675px) {
   .header .logo {
-    display: none;
+    font-size: 20px;
   }
+}
 
-  .header .mobile-logo {
-    display: block;
-    height: 26px;
-    margin-top: 1px;
+@media (max-width: 475px) {
+  .header .logo {
+    font-size: 16px;
   }
 }
 
@@ -111,7 +108,7 @@
   padding-right: 13px;
 }
 
-.header .orders-link.active{
+.header .orders-link.active {
   text-decoration: underline;
 }
 

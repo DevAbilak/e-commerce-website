@@ -10,9 +10,8 @@ const CheckoutHeader = ({ cart }) => {
     <div className="checkout-header">
       <div className="header-content">
         <div className="checkout-header-left-section">
-          <Link to="/">
-            <img className="logo" src={logo} />
-            <img className="mobile-logo" src={mobileLogo} />
+          <Link to="/" className="checkout-header-link">
+            <p className="logo">E-Merkato</p>
           </Link>
         </div>
 

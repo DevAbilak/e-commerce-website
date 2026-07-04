@@ -26,13 +26,26 @@
   width: 200px;
 }
 
-.checkout-header .logo {
-  height: 26px;
-  margin-top: 0px;
+.checkout-header-link {
+  text-decoration: none;
 }
 
-.checkout-header .mobile-logo {
-  display: none;
+.checkout-header .logo {
+  font-size: 28px;
+  color: rgb(25, 135, 84);
+  font-weight: bold;
+}
+
+@media (max-width: 675px) {
+  .checkout-header .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 475px) {
+  .checkout-header .logo {
+    font-size: 16px;
+  }
 }
 
 /* @media is used to create responsive design (making the
@@ -42,15 +55,6 @@
 @media (max-width: 575px) {
   .checkout-header .checkout-header-left-section {
     width: auto;
-  }
-
-  .checkout-header .logo {
-    display: none;
-  }
-
-  .checkout-header .mobile-logo {
-    display: inline-block;
-    height: 26px;
   }
 }
 

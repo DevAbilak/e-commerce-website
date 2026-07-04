@@ -32,8 +32,7 @@ const Navbar = ({ cart }) => {
     <div className="header">
       <div className="left-section">
         <NavLink to="/" className="header-link">
-          <img className="logo" src={logo} />
-          <img className="mobile-logo" src={mobileLogo} />
+          <p className="logo">E-Merkato</p>
         </NavLink>
       </div>
 
