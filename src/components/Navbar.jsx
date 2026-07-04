@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { NavLink, useNavigate, useSearchParams } from "react-router";
 import "../styles/shared/header.css";
-import logo from "../assets/images/logo-white.png";
-import mobileLogo from "../assets/images/mobile-logo-white.png";
 import searchIcon from "../assets/images/icons/search-icon.png";
 import cartIcon from "../assets/images/icons/cart-icon.png";
 import { calcCartQuantity } from "../Utils/calcCartQuantity.js";

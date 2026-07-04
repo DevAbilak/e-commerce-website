@@ -13,7 +13,7 @@ const App = () => {
 
   const fetchCartData = async () => {
     const res = await axios.get(
-      "https://e-commerce-backend-6h0s.onrender.com/api/cart-items?expand=product",
+      "https://e-commerce-backend-6h0s.onrender.com/api/cart-items",
     );
     setCart(res.data);
   };

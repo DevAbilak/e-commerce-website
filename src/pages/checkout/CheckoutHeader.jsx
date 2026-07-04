@@ -1,7 +1,5 @@
 import { Link } from "react-router";
 import "../../styles/pages/checkout/checkout-header.css";
-import logo from "../../assets/images/logo.png";
-import mobileLogo from "../../assets/images/mobile-logo.png";
 import checkoutLockIcon from "../../assets/images/icons/checkout-lock-icon.png";
 import { calcCartQuantity } from "../../Utils/calcCartQuantity";
 

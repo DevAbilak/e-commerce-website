@@ -40,7 +40,7 @@ const ProductCard = ({
         <img
           className="product-image"
           data-testid="product-image"
-          src={image}
+          src={`https://e-commerce-website-one-lovat.vercel.app/${image}`}
         />
       </div>
 
@@ -50,7 +50,7 @@ const ProductCard = ({
         <img
           className="product-rating-stars"
           data-testid="product-rating-stars-image"
-          src={`images/ratings/rating-${stars * 10}.png`}
+          src={`https://e-commerce-website-one-lovat.vercel.app/images/ratings/rating-${stars * 10}.png`}
         />
         <div className="product-rating-count link-primary">{count}</div>
       </div>
